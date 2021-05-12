@@ -1,10 +1,10 @@
-package ren.vic.springlearning;
+package vic.ren.hellospring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringLearningApplicationTests {
+class HelloSpringApplicationTests {
 
     @Test
     void contextLoads() {
