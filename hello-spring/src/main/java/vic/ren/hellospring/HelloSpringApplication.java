@@ -8,7 +8,7 @@ public class HelloSpringApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HelloSpringApplication.class, args);
-        Person person = new Person(new CleanAir());
+        Person person = new Person(new DirtyAir());
         person.Breath();
     }
 
