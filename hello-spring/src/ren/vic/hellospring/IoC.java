@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class IoC {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        UserDao userDao = (UserDao) applicationContext.getBean("userDao");
-        userDao.login();
+        UserService userService = (UserService) applicationContext.getBean("userService");
+        userService.login();
     }
 }
