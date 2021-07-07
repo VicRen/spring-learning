@@ -2,6 +2,9 @@ package ren.vic.masterjava;
 
 import org.junit.Test;
 
+import ren.vic.masterjava.annotation.Apple;
+import ren.vic.masterjava.annotation.FruitInfoUtil;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,5 +16,10 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void fruit_provider() {
+        FruitInfoUtil.getFruitInfo(Apple.class);
     }
 }
