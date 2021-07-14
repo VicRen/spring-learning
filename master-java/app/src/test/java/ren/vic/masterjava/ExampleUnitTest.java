@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import ren.vic.masterjava.annotation.Apple;
 import ren.vic.masterjava.annotation.FruitInfoUtil;
+import ren.vic.masterjava.interrupt.SafeInterruptThread;
 
 import static org.junit.Assert.*;
 
@@ -21,5 +22,17 @@ public class ExampleUnitTest {
     @Test
     public void fruit_provider() {
         FruitInfoUtil.getFruitInfo(Apple.class);
+    }
+
+    @Test
+    public void interrupt_thread() {
+        SafeInterruptThread thread = new SafeInterruptThread();
+        thread.start();
+        thread.interrupt();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
